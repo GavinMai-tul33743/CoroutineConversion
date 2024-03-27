@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
 
         cakeImageView = findViewById(R.id.imageView)
 
-        val scope = CoroutineScope(Job() + Dispatchers.Main)
+        val scope = CoroutineScope(Job() + Dispatchers.Default)
 
         findViewById<Button>(R.id.revealButton).setOnClickListener{
             scope.launch { showImage() }
